@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-size: 16px;
+    font-family: system-ui, sans-serif;
+    background: url('../images/bg2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    color: #ef6e58;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Increased heading size */
+}
+
+/* Form Container */
+form {
+    max-width: 100%;
+    padding: 20px; /* Consistent padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 4% auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Added shadow for better visibility */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px; /* Reduced spacing */
+    font-size: 1rem; /* Adjusted label font size */
+    font-weight: bold; /* Better visibility */
+}
+
+/* Inputs and Selects */
+.form-control, .form-select {
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ced4da; /* Default border color */
+    padding: 10px; /* Increased padding for better UX */
+    width: 100%; /* Ensure full-width inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+/* Error Messages */
+.error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px; /* Spacing above the error messages */
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: absolute;
+    top: 100%; /* Position below the input */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    font-size: 0.9rem;
+    width: calc(100% - 20px); /* Adjust width for padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Validation Images */
+.input-1 {
+    border: 1px solid green;
+}
+
+.input-2 {
+    border: 1px solid red;
+}
+
+.input-3 {
+    border: 1px solid blue; /* Adjust border color for valid fields */
+}
+
+.input-4 {
+    border: 1px solid yellow; /* Adjust border color for invalid fields */
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column; /* Stack checkboxes vertically on smaller screens */
+    gap: 10px; /* Space between checkboxes */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* Adjust width on smaller screens */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+    
+    .tooltip {
+        font-size: 0.8rem; /* Smaller font size for tooltips on smaller screens */
+    }
+    
+    .form-control, .form-select {
+        padding: 8px; /* Reduce padding in inputs on smaller screens */
+    }
+    
+    /* Stack form elements vertically and increase spacing */
+    .form-check, .form-group {
+        margin-bottom: 20px; /* Increase space between form groups */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem; /* Smaller font size for headings on very small screens */
+    }
+    
+    .form-control, .form-select {
+        font-size: 0.9rem; /* Adjust font size for inputs on very small screens */
+    }
+    
+    .error {
+        font-size: 0.75rem; /* Smaller error font size on very small screens */
+    }
+}
